@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GDMania – jogo de ritmo 4K feito em Godot</title>
+<meta name="description" content="Jogo de ritmo de 4 lanes que joga charts de FNF, StepMania e osu!mania. Para PC e Android.">
+<link rel="icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+
+<header class="hero">
+  <div>
+    <h1>gdmania!</h1>
+    <p class="lead">Jogo de ritmo de 4 lanes feito em Godot. Joga charts de FNF, StepMania e osu!mania, no PC e no Android.</p>
+    <div class="btns">
+      <a class="btn" href="https://github.com/euzinho00000888-hue/GDMania/releases">Baixar</a>
+      <a class="btn alt" href="https://github.com/euzinho00000888-hue/GDMania">Ver no GitHub</a>
+    </div>
+  </div>
+  <div class="stage">
+    <canvas id="lanes" width="340" height="453" aria-label="Demonstração: notas caindo em 4 lanes. Toque ou use D F J K para acertar."></canvas>
+    <p class="hint">Toque nas lanes ou aperte <kbd>D</kbd> <kbd>F</kbd> <kbd>J</kbd> <kbd>K</kbd></p>
+  </div>
+</header>
+
+<section id="formatos">
+  <h2>Toque as músicas que você já tem</h2>
+  <div class="formats">
+    <div class="fmt" style="--c:var(--pink)"><h3>FNF / Psych Engine</h3><p>Arquivos <code>.json</code> com <code>inst.ogg</code> e <code>voices.ogg</code>.</p></div>
+    <div class="fmt" style="--c:var(--cyan)"><h3>StepMania</h3><p>Arquivos <code>.sm</code> e <code>.ssc</code> (dance-single), inclusive packs inteiros.</p></div>
+    <div class="fmt" style="--c:var(--green)"><h3>osu!mania 4K</h3><p>Arquivos <code>.osu</code> e <code>.osz</code>.</p></div>
+  </div>
+  <p style="margin-top:1.5rem" class="note">Também tem conversores de <code>.sm</code> para FNF e de FNF para <code>.sm</code>.</p>
+</section>
+
+<section id="como-usar">
+  <h2>Como jogar</h2>
+  <ol>
+    <li>Em <strong>Jogar → Importar</strong>, escolha uma pasta, arquivos avulsos ou a importação manual (chart, inst e voices).</li>
+    <li>Toque na música e depois na dificuldade, ou em JOGAR.</li>
+    <li>Ajuste teclas, direção da rolagem, velocidade, offset e volumes em <strong>Opções</strong>.</li>
+  </ol>
+</section>
+
+<section id="controles">
+  <h2>Controles</h2>
+  <div class="two">
+    <div class="box"><h3>PC</h3><p>4 teclas configuráveis. O padrão é D F J K. Esc pausa.</p></div>
+    <div class="box"><h3>Android</h3><p>A tela inteira é a hitbox, dividida em 4 zonas de toque. O botão de pausa fica no canto superior direito.</p></div>
+  </div>
+</section>
+
+<section id="baixar">
+  <h2>Baixar</h2>
+  <p>Os arquivos ficam na página de <a href="https://github.com/euzinho00000888-hue/GDMania/releases">releases</a> do GitHub. A versão para Android é a mais testada.</p>
+  <p class="note">A versão para Windows está indisponível por enquanto: a exportação ainda não gera um executável que abre.</p>
+  <p class="note">Para compilar você mesmo, abra a pasta no Godot 4.4 ou mais novo e use Projeto → Exportar.</p>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <p>Licença MIT. Desenvolvido com a ajuda do <a href="https://www.anthropic.com/claude">Claude</a>, da Anthropic.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
