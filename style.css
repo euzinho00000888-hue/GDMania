@@ -1,0 +1,50 @@
+:root{
+  --bg:#0a0814; --panel:#13101f; --text:#f3f0fa; --muted:#a7a1bd;
+  --pink:#c24b99; --cyan:#00e5ff; --green:#12fa05; --red:#f9393f;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;line-height:1.05;margin:0}
+a{color:var(--cyan)}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+section{padding:4rem 0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.5rem}
+p{max-width:62ch;margin:0 0 1rem}
+
+/* hero */
+.hero{display:grid;gap:2rem;align-items:center;padding:3rem 0 2rem}
+@media(min-width:800px){.hero{grid-template-columns:1.1fr .9fr;padding:5rem 0 3rem}}
+.hero h1{font-size:clamp(3.5rem,13vw,7rem);font-weight:800;letter-spacing:-.03em}
+.lead{font-size:1.25rem;color:var(--muted);margin:1.25rem 0 2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:.6rem;font-weight:600;text-decoration:none;border:2px solid var(--cyan);color:var(--bg);background:var(--cyan)}
+.btn.alt{background:transparent;color:var(--text);border-color:#4a4466}
+.stage{justify-self:center;width:100%;max-width:340px}
+canvas{display:block;width:100%;aspect-ratio:3/4;border-radius:.9rem;background:#07050f;border:1px solid #2a2540;touch-action:manipulation;cursor:pointer}
+.hint{font-size:.9rem;color:var(--muted);text-align:center;margin:.6rem 0 0}
+kbd{font:inherit;font-weight:600;border:1px solid #4a4466;border-radius:.3rem;padding:0 .35rem}
+
+/* formatos: cada um leva a cor de uma lane */
+.formats{display:grid;gap:1.25rem}
+@media(min-width:800px){.formats{grid-template-columns:repeat(3,1fr)}}
+.fmt{border-left:6px solid var(--c);padding:.25rem 0 .25rem 1.1rem}
+.fmt h3{font-size:1.4rem;margin-bottom:.3rem}
+.fmt p{color:var(--muted);margin:0}
+.fmt code{color:var(--text)}
+
+/* passos: aqui a ordem importa */
+ol{padding:0;margin:0;list-style:none;counter-reset:s;display:grid;gap:1rem;max-width:62ch}
+ol li{counter-increment:s;padding-left:3rem;position:relative}
+ol li::before{content:counter(s);position:absolute;left:0;top:0;width:2.1rem;height:2.1rem;border-radius:50%;display:grid;place-items:center;background:var(--panel);border:2px solid var(--pink);font-weight:600}
+
+.two{display:grid;gap:2rem}
+@media(min-width:800px){.two{grid-template-columns:1fr 1fr}}
+.box{background:var(--panel);border-radius:.9rem;padding:1.5rem}
+.box h3{font-size:1.4rem;margin-bottom:.6rem}
+.box p:last-child{margin:0}
+.note{color:var(--muted);font-size:.95rem}
+footer{border-top:1px solid #2a2540;padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
