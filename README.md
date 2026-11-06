@@ -27,5 +27,7 @@ Funciona no PC (teclado) e no Android (a tela inteira vira a hitbox, com 4 zonas
 Abra a pasta no Godot 4.4+ e use Projeto → Exportar (Android, Windows ou Linux).
 As músicas importadas ficam em `user://songs/`.
 
+> ⚠️ **Windows:** a versão atual não abre porque o Godot não está gerando o arquivo `.pck` necessário para executar o jogo. A exportação para Windows está temporariamente indisponível; estou investigando o problema.
+
 ## Licença
 MIT, veja o arquivo `LICENSE`.
